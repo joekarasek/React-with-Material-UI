@@ -6,15 +6,26 @@ import Typography from 'material-ui/Typography';
 
 class App extends Component {
     render() {
+        const classes = {
+            card: {
+                maxWidth: 345,
+            },
+            media: {
+                height: 0,
+                paddingTop: '56.25%', // 16:9
+            },
+        };
+
         return (
             <div>
                 <h1>Hello World</h1>
                 <Button variant="raised" color="primary">
                     Click Me!
                 </Button>
-                <Card>
+                <Card style={classes.card}>
                     <CardMedia
-                        image="http://placekitten.com/g/200/300"
+                        style={classes.media}
+                        image="http://placekitten.com/g/400/300"
                         title="A cute looking cat"
                     />
                     <CardContent>
